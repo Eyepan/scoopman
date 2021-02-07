@@ -1,5 +1,5 @@
 SOURCEFILES = src\*.cpp
-TARGET = bin\paman.exe
+TARGET = bin\pacman.exe
 INCLUDEPATH = include\
 
 all:
