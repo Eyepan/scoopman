@@ -7,4 +7,4 @@ all:
 	link bin\*.obj /out:$(TARGET)
 
 clean:
-	del bin /Q
+	del bin\* /Q
