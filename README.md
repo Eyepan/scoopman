@@ -21,3 +21,6 @@ If you have gcc/mingw installed:
 
 If you don't have a C++ compiler you can download the latest release from https://github.com/Eyepan/scoopman/releases
 1. Copy the file `pacman.exe` to `~\scoop\shims`
+
+I can add any and all functionality that is required.
+You can also install Scoop from https://scoop.sh
