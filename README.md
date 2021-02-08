@@ -8,7 +8,7 @@ And so is https://github.com/rami3l/pacaptr which is written in Rust and is hone
 
 `git clone https://github.com/Eyepan/scoopman.git`
 
-If you have C++ BuildTools installed:
+If you have C++ BuildTools/Visual Studio C++ installed:
 1. Create a Developer CMD instance and `cd` to the directory where you cloned scoopman
 2. `nmake`
 3. Copy the file `bin\pacman.exe` to `~\scoop\shims`
