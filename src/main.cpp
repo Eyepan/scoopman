@@ -28,20 +28,33 @@ int main(int argc, char** argv)
 
     if (flags == "-Syu")
     {
-        system("echo Updating all applications");
+        std::cout << "UPDATING ALL APPLICATIONS\n";
         system("scoop update *");
+        std::cout << "RUNNING SCOOP STATUS\n";
         system("scoop status");
         if (applications.length() > 2)
         {
-            std::cout << "INSTALLING :\n" << applications;
+            std::cout << "INSTALLING: " << applications << "\n";
             std::string command = "scoop install " + applications + " --global";
             system(command.c_str());
         }
     }
     else if (flags == "-S")
     {
-        std::cout << "INSTALLING :\n" << applications;
+        std::cout << "INSTALLING: " << applications << "\n";
         std::string command = "scoop install " + applications + " --global";
+        system(command.c_str());
+    }
+    else if (flags == "-Qe")
+    {
+        std::cout << "SEARCHING INSTALLED FOR: " << applications << "\n";
+        std::string command = "scoop which " + applications + " --global";
+        system(command.c_str());
+    }
+    else if (flags == "-Ss")
+    {
+        std::cout << "SEARCHING ONLINE FOR: " << applications << "\n";
+        std::string command = "scoop search " + applications + " --global";
         system(command.c_str());
     }
     else if (flags == "-Q")
@@ -51,9 +64,13 @@ int main(int argc, char** argv)
     }
     else if (flags == "-R")
     {
-        std::cout << "UNINSTALLING" << applications << "\n";
+        std::cout << "UNINSTALLING: " << applications << "\n";
         std::string command = "scoop uninstall " + applications + " --global";
         system(command.c_str());
+    }
+    else
+    {
+        std::cout << "INVALID OPTION\n"; 
     }
     // system("pause");
     return 0;
