@@ -7,5 +7,4 @@ all:
 	link bin\*.obj /out:$(TARGET)
 
 clean:
-	Remove-Item bin -Recurse
-	New-Item -ItemType directory bin
+	del bin /Q

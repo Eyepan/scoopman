@@ -30,9 +30,12 @@ int main(int argc, char** argv)
     {
         system("echo Updating all applications");
         system("scoop update *");
-        std::cout << "INSTALLING :\n" << applications;
-        std::string command = "scoop install " + applications + " --global";
-        system(command.c_str());
+        if (applications.length() > 2)
+        {
+            std::cout << "INSTALLING :\n" << applications;
+            std::string command = "scoop install " + applications + " --global";
+            system(command.c_str());
+        }
     }
     else if (flags == "-S")
     {
