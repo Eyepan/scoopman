@@ -30,6 +30,7 @@ int main(int argc, char** argv)
     {
         system("echo Updating all applications");
         system("scoop update *");
+        system("scoop status");
         if (applications.length() > 2)
         {
             std::cout << "INSTALLING :\n" << applications;
