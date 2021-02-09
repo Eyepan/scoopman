@@ -20,7 +20,7 @@ If you have C++ BuildTools/Visual Studio C++ installed:
 If you have gcc/mingw installed:
 1. cd to the folder you have cloned scoopman
 2. `mkdir bin`
-3. `g++ src\*.cpp -o bin\pacman.exe`
+3. `g++ src\*.cpp -I include -o bin\pacman.exe`
 4. Copy the file `bin\pacman.exe` to `~\scoop\shims`
 
 If you don't have a C++ compiler you can download the latest release from https://github.com/Eyepan/scoopman/releases
