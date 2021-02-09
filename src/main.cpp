@@ -93,6 +93,5 @@ int main(int argc, char** argv)
         std::cin.get();
         system("scoop help");
     }
-    // system("pause");
     return 0;
 }
