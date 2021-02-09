@@ -10,7 +10,7 @@ Command::Command(int argc, char** argv)
 void Command::parseCommands(int argc, char** argv)
 {
     //transferring the contents of the argv into a tokens vector iterativel
-	for (int i = 0; i < argc; i++)
+    for (int i = 0; i < argc; i++)
     {
         tokens.push_back(argv[i]);
     }
