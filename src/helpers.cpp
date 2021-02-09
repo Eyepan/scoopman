@@ -95,21 +95,25 @@ void Command::queueCommand(Command::comm decidedCommand)
         {
             std::cout << "SEARCHING INSTALLED FOR: " << applicationslist << "\n";
             executeCommand("scoop which " + applicationslist + " --global");
+            break;
         }
         case searchonline:
         {
             std::cout << "SEARCHING ONLINE FOR: " << applicationslist << "\n";
             executeCommand("scoop search " + applicationslist + "--global");
+            break;
         }
         case list:
         {
             std::cout << "LISTING ALL INSTALLED APPS:\n";
             executeCommand("scoop list");
+            break;
         }
         case uninstall:
         {
             std::cout << "UNINSTALLING: " << applicationslist << "\n";
             executeCommand("scoop uninstall " + applicationslist + " --global");
+            break;
         }
         case help:
         {
@@ -117,11 +121,13 @@ void Command::queueCommand(Command::comm decidedCommand)
             std::cout << "PRESS ENTER TO RUN SCOOP HELP:";
             std::cin.get();
             executeCommand("scoop help");
+            break;
         }
         default:
         {
             std::cout << "INVALID OPTION";
             std::cout << man << "\n";
+            break;
         }
     }
 }
