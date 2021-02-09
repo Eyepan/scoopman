@@ -6,15 +6,15 @@
 int main(int argc, char** argv)
 {
     std::string man =
-"\nFLAGS           USE CASE"
-"\n- (or) -h       Show this page. Yeah that's how you got here"
-"\n-S              Install an/multiiple apps"
-"\n-Syu            Update the system and install apps (if you want tho)"
-"\n-Q              List all apps installed (You can also grep this if you want to search for a single app)"
-"\n-Qe             Runs scoop which for your app of choice"
-"\n-Ss             Search online for your app"
-"\n-R              Removes/Uninstalls an app"
-"\nAnything else   INVALID OPTION and you also get this file as a ball of shame!";
+"\nFLAGS           USE CASE                         SCOOP EQUIVALENT"
+"\n- (or) -h       Show this page                   scoop help"
+"\n-S              Install an/multiiple apps        scoop install"
+"\n-Syu            Update and install new apps      scoop update * && scoop install"
+"\n-Q              List all installed apps          scoop list"   
+"\n-Qe             Search for installed apps        scoop which"
+"\n-Ss             Searches online for apps         scoop search"
+"\n-R              Removes/Uninstalls an app        scoop uninstall"
+"\nAnything else   INVALID OPTION                   scoop help";
     //converting command line arguments into tokens and saving it into a vector
     std::vector<std::string> tokens;
     for(int i = 0; i < argc; i++)
