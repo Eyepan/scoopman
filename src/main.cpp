@@ -7,7 +7,7 @@ int main(int argc, char** argv)
 {
     std::string man =
 "\nFLAGS           USE CASE"
-"\n-               Show this page. Yeah that's how you got here"
+"\n- (or) -h       Show this page. Yeah that's how you got here"
 "\n-S              Install an/multiiple apps"
 "\n-Syu            Update the system and install apps (if you want tho)"
 "\n-Q              List all apps installed (You can also grep this if you want to search for a single app)"

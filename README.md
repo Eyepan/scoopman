@@ -4,7 +4,7 @@ An PACMAN like wrapper for SCOOP written in C++.
 Please note that https://github.com/Eyepan/scoopyman is a much much better alternative to this one.  
 And so is https://github.com/rami3l/pacaptr which is written in Rust and is honestly well coded than me. That being said if you do plan to stick around, please follow these instructions.
 
-# INSTRUCTIONS TO USE
+# INSTRUCTIONS TO INSTALL
 
 `git clone https://github.com/Eyepan/scoopman.git`
 
@@ -24,3 +24,16 @@ If you don't have a C++ compiler you can download the latest release from https:
 
 I can add any and all functionality that is required.
 You can also install Scoop from https://scoop.sh
+
+# USAGE
+
+|Flags|Use Case|
+|-----|--------|
+|-(or) -h| Show the help page|
+|-S|Install an/multiple apps|
+|-Syu|Update all installed apps and install additional apps if necessary|
+|-Q|List all installed apps|
+|-Qe|Search for installed apps by running `scoop which`|
+|-Ss|Searches online for apps by running `scoop search`|
+|-R|Removes/Uninstalls an app|
+|Anything else|Invalid option|
