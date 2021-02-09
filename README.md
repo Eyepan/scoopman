@@ -27,13 +27,13 @@ You can also install Scoop from https://scoop.sh
 
 # USAGE
 
-|Flags|Use Case|
-|-----|--------|
-|-(or) -h| Show the help page|
-|-S|Install an/multiple apps|
-|-Syu|Update all installed apps and install additional apps if necessary|
-|-Q|List all installed apps|
-|-Qe|Search for installed apps by running `scoop which`|
-|-Ss|Searches online for apps by running `scoop search`|
-|-R|Removes/Uninstalls an app|
-|Anything else|Invalid option|
+|Flags|Use Case|Scoop Equivalent|
+|-----|--------|----------------|
+|-(or) -h| Show this page|`scoop help`|
+|-S|Install an/multiple apps|`scoop install`|
+|-Syu|Update all installed apps and install additional apps if necessary|`scoop update * && scoop install`|
+|-Q|List all installed apps|`scoop list`|
+|-Qe|Search for installed apps|`scoop which`|
+|-Ss|Searches online for apps|`scoop search`|
+|-R|Removes/Uninstalls an app|`scoop uninstall`|
+|Anything else|Invalid option|`scoop help`|

@@ -81,11 +81,17 @@ int main(int argc, char** argv)
     else if (flags == "-h")
     {
         std::cout << man << "\n";
+        std::cout << "PRESS ANY KEY TO RUN SCOOP HELP:";
+        std::cin.get();
+        system("scoop help");
     }
     else
     {
         std::cout << "INVALID OPTION\n";
         std::cout << man << "\n";
+        std::cout << "PRESS ANY KEY TO RUN SCOOP HELP:";
+        std::cin.get();
+        system("scoop help");
     }
     // system("pause");
     return 0;
