@@ -5,6 +5,16 @@
 
 int main(int argc, char** argv)
 {
+    std::string man =
+"\nFLAGS           USE CASE"
+"\n-               Show this page. Yeah that's how you got here"
+"\n-S              Install an/multiiple apps"
+"\n-Syu            Update the system and install apps (if you want tho)"
+"\n-Q              List all apps installed (You can also grep this if you want to search for a single app)"
+"\n-Qe             Runs scoop which for your app of choice"
+"\n-Ss             Search online for your app"
+"\n-R              Removes/Uninstalls an app"
+"\nAnything else   INVALID OPTION and you also get this file as a ball of shame!";
     //converting command line arguments into tokens and saving it into a vector
     std::vector<std::string> tokens;
     for(int i = 0; i < argc; i++)
@@ -70,7 +80,8 @@ int main(int argc, char** argv)
     }
     else
     {
-        std::cout << "INVALID OPTION\n"; 
+        std::cout << "INVALID OPTION\n";
+        std::cout << man << "\n";
     }
     // system("pause");
     return 0;
