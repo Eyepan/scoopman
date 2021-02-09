@@ -7,7 +7,10 @@ That being said this is a much simpler/beginner-oriented project and if you do p
 
 # INSTRUCTIONS TO INSTALL
 
+You can install Scoop from following the instructions on  https://scoop.sh
+
 `git clone https://github.com/Eyepan/scoopman.git`
+
 
 If you have C++ BuildTools/Visual Studio C++ installed:
 1. Create a Developer CMD instance and `cd` to the directory where you cloned scoopman
@@ -23,8 +26,6 @@ If you have gcc/mingw installed:
 If you don't have a C++ compiler you can download the latest release from https://github.com/Eyepan/scoopman/releases
 1. Copy the file `pacman.exe` to `~\scoop\shims`
 
-I can add any and all functionality that is required.
-You can also install Scoop from https://scoop.sh
 
 # USAGE INSTRUCTIONS
 
@@ -38,3 +39,5 @@ You can also install Scoop from https://scoop.sh
 |-Ss|Searches online for apps|`scoop search`|
 |-R|Removes/Uninstalls an app|`scoop uninstall`|
 |Anything else|Invalid option|`scoop help`|
+
+I can add any and all functionality that is required. Feel free to raise an issue!
