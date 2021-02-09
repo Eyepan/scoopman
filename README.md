@@ -1,7 +1,7 @@
 # scoopman
 An PACMAN like wrapper for SCOOP written in C++.
 
-Please note that https://github.com/rami3l/pacaptr written in Rust, is a much much better, and is honestly well coded than me. That being said if you do plan to stick around, please follow these instructions.
+Please note that https://github.com/rami3l/pacaptr written in Rust, is much better, and is honestly well coded than me. That being said if you do plan to stick around, please follow these instructions.
 
 # INSTRUCTIONS TO INSTALL
 
