@@ -78,6 +78,10 @@ int main(int argc, char** argv)
         std::string command = "scoop uninstall " + applications + " --global";
         system(command.c_str());
     }
+    else if (flags == "-h")
+    {
+        std::cout << man << "\n";
+    }
     else
     {
         std::cout << "INVALID OPTION\n";
