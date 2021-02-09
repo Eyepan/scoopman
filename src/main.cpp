@@ -5,6 +5,16 @@
 
 int main(int argc, char** argv)
 {
+    std::string man =
+"\nFLAGS           USE CASE                         SCOOP EQUIVALENT"
+"\n- (or) -h       Show this page                   scoop help"
+"\n-S              Install an/multiiple apps        scoop install"
+"\n-Syu            Update and install new apps      scoop update * && scoop install"
+"\n-Q              List all installed apps          scoop list"   
+"\n-Qe             Search for installed apps        scoop which"
+"\n-Ss             Searches online for apps         scoop search"
+"\n-R              Removes/Uninstalls an app        scoop uninstall"
+"\nAnything else   INVALID OPTION                   scoop help";
     //converting command line arguments into tokens and saving it into a vector
     std::vector<std::string> tokens;
     for(int i = 0; i < argc; i++)
@@ -28,19 +38,33 @@ int main(int argc, char** argv)
 
     if (flags == "-Syu")
     {
-        system("echo Updating all applications");
+        std::cout << "UPDATING ALL APPLICATIONS\n";
         system("scoop update *");
+        std::cout << "RUNNING SCOOP STATUS\n";
+        system("scoop status");
         if (applications.length() > 2)
         {
-            std::cout << "INSTALLING :\n" << applications;
+            std::cout << "INSTALLING: " << applications << "\n";
             std::string command = "scoop install " + applications + " --global";
             system(command.c_str());
         }
     }
     else if (flags == "-S")
     {
-        std::cout << "INSTALLING :\n" << applications;
+        std::cout << "INSTALLING: " << applications << "\n";
         std::string command = "scoop install " + applications + " --global";
+        system(command.c_str());
+    }
+    else if (flags == "-Qe")
+    {
+        std::cout << "SEARCHING INSTALLED FOR: " << applications << "\n";
+        std::string command = "scoop which " + applications + " --global";
+        system(command.c_str());
+    }
+    else if (flags == "-Ss")
+    {
+        std::cout << "SEARCHING ONLINE FOR: " << applications << "\n";
+        std::string command = "scoop search " + applications + " --global";
         system(command.c_str());
     }
     else if (flags == "-Q")
@@ -50,9 +74,24 @@ int main(int argc, char** argv)
     }
     else if (flags == "-R")
     {
-        std::cout << "UNINSTALLING" << applications << "\n";
+        std::cout << "UNINSTALLING: " << applications << "\n";
         std::string command = "scoop uninstall " + applications + " --global";
         system(command.c_str());
+    }
+    else if (flags == "-h")
+    {
+        std::cout << man << "\n";
+        std::cout << "PRESS ANY KEY TO RUN SCOOP HELP:";
+        std::cin.get();
+        system("scoop help");
+    }
+    else
+    {
+        std::cout << "INVALID OPTION\n";
+        std::cout << man << "\n";
+        std::cout << "PRESS ANY KEY TO RUN SCOOP HELP:";
+        std::cin.get();
+        system("scoop help");
     }
     // system("pause");
     return 0;
