@@ -2,5 +2,4 @@
 .vscode
 bin
 TODO.txt
-reflectchanges.sh
 reflectchanges.py
