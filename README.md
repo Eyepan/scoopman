@@ -3,7 +3,7 @@ An PACMAN like wrapper for SCOOP written in C++.
 
 Please note that https://github.com/rami3l/pacaptr written in Rust, is much better, and is honestly well coded than this project.  
 
-That being said this is a much simpler/beginner-oriented project and if you do plan to stick around, please follow these instructions.
+That being said if you still want to stick around and follow this, you can do so!
 
 # INSTRUCTIONS TO INSTALL
 
