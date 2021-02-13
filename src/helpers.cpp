@@ -75,7 +75,7 @@ void Command::queueCommand(Command::comm decidedCommand)
         case install:
         {
             std::cout << "INSTALLING: " << applicationslist << "\n";
-            executeCommand("scoop insatll " + applicationslist + " --global");
+            executeCommand("scoop install " + applicationslist + " --global");
             break;
         }
         case update:
@@ -87,7 +87,7 @@ void Command::queueCommand(Command::comm decidedCommand)
             if (applicationslist.length() > 2)
             {
                 std::cout << "INSTALLING: " << applicationslist << "\n";
-                executeCommand("scoop insatll " + applicationslist + " --global");
+                executeCommand("scoop install " + applicationslist + " --global");
             }
             break;
         }
